@@ -1,0 +1,223 @@
+
+public class Point 
+
+{
+//variable
+private float abscisse; 
+private float ordonné;
+
+
+
+public void affichier ()
+{
+System.out.println("x= "+abscisse+"y ="+ordonné);
+
+}
+
+
+//constructeur1
+public Point() { }
+//constructeur2
+public Point(float abscisse, float ordonné ) {
+this.abscisse=abscisse;
+this.ordonné=ordonné;
+
+}
+
+//accesseur
+public float getAbscisse()
+{
+return abscisse;
+}
+public float getOrdonné()
+{
+return ordonné;
+}
+
+
+
+
+//modificateur
+void setAbscisse(float a)
+{
+abscisse=a;
+}
+void setOrdonné(float o)
+{
+ordonné=o;
+}
+
+public void deplacer( float x, float y )
+{
+abscisse+=x;
+ordonné+=y;
+}
+
+//tostring
+
+public String ToString()
+
+{ 
+return ("x= "+abscisse+"y ="+ordonné);
+
+}
+
+//bool 
+
+public boolean CompareTo(point p2)
+{
+return (abscisse == p2.abscisse && ordonné == p2.ordonné );
+}
+
+
+}
+public class Point 
+
+{
+//variable
+private float abscisse; 
+private float ordonné;
+
+
+
+public void affichier ()
+{
+System.out.println("x= "+abscisse+" y ="+ordonné);
+
+}
+
+
+//constructeur1
+public Point() { }
+//constructeur2
+public Point(float abscisse, float ordonné ) {
+this.abscisse=abscisse;
+this.ordonné=ordonné;
+
+}
+
+//accesseur
+public float getAbscisse()
+{
+return abscisse;
+}
+public float getOrdonné()
+{
+return ordonné;
+}
+
+
+
+
+//modificateur
+void setAbscisse(float a)
+{
+abscisse=a;
+}
+void setOrdonné(float o)
+{
+ordonné=o;
+}
+
+public void deplacer( float x, float y )
+{
+abscisse+=x;
+ordonné+=y;
+}
+
+//tostring
+
+public String ToString()
+
+{ 
+return ("x= "+abscisse+" y ="+ordonné);
+
+}
+
+//bool 
+
+public boolean CompareTo(point p2)
+{
+return (abscisse == p2.abscisse && ordonné == p2.ordonné );
+}
+
+}
+
+public class point {
+
+
+
+//variable
+float abscisse,ordonnée;
+
+public void afficher ()
+{
+System.out.println("x= "+abscisse+"y ="+ordonnée);
+
+}
+void deplacer (float x,float y)
+{
+abscisse=abscisse+x;
+ordonnée=ordonnée+y;
+}
+public point ()
+{
+}
+public point (float abscisse, float ordonnée )
+{
+this.abscisse=abscisse;
+this.ordonnée =ordonnée ;
+}
+public float getabscisse ()
+{
+return abscisse;
+}
+public float getordonnée ()
+{ 
+return ordonnée ;
+}
+public void setabscisse(float x)
+{
+abscisse=x;
+}
+public void setordonné(float y)
+{
+ordonnée=y;
+}
+public String toString()
+{
+return ("x= "+abscisse+"y ="+ordonnée);
+
+}
+boolean compareTo(point p)
+{
+if (abscisse==p.abscisse &&ordonnée==p.ordonnée)
+return true;
+else 
+return false;
+
+}
+}
+
+
+
+public class TestPoint
+{
+public static void main(String [] args)
+{
+Point p=new Point();
+p.affichier();
+p.deplacer(2.5f,-1);
+p.affichier();
+//constructeur1
+Point p1=new Point (1,2.3f);
+Point p2=new Point();
+p1.deplacer (-0.5f,0.7f);
+//sol1
+p2.setAbscisse(p1.getAbscisse());
+p2.setOrdonné(p1.getOrdonné());
+//sol>>>>p2.deplacer(p1.getAbscisse()+p1.getOrdonné())
+
+p1.affichier();
+System.out.println(p2.ToString());
+}
